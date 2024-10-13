@@ -1,0 +1,8 @@
+Options All -Indexes
+
+RewriteBase /
+
+RewriteEngine On
+RewriteRule ^images/[0-9a-z\.]$ meblech.pl/images/$1
+RewriteRule ^([0-9a-z\.]+)/a$ meblech.pl/index.php?pid=$1&ajax=1 [L]
+RewriteRule ^([0-9a-z]+)$ meblech.pl/index.php?pid=$1
